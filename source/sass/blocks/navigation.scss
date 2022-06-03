@@ -1,0 +1,31 @@
+.navigation {
+  display: flex;
+  justify-content: space-between;
+
+  @media (max-width: $vp-1200 - 1) {
+    margin-bottom: 25px;
+  }
+
+  @media (max-width: $vp-768 - 1) {
+    margin-bottom: 80px;
+  }
+}
+
+.navigation__link {
+  font-family: $ff-bebas;
+  font-size: 24px;
+  color: $color-default-white;
+  transition: opacity $trans-default;
+
+  @media (hover: hover), screen and (min-width: 0\0) {
+    &:hover,
+    &:focus {
+      opacity: 0.8;
+    }
+  }
+
+  @media (max-width: $vp-768 - 1) {
+    font-size: 20px;
+    line-height: 20px;
+  }
+}
