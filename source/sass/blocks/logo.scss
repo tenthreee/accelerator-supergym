@@ -1,0 +1,20 @@
+.logo {
+  transition: opacity $trans-default;
+
+  @media (hover: hover), screen and (min-width: 0\0) {
+    &:hover,
+    &:focus {
+      opacity: 0.8;
+    }
+  }
+
+  @media (max-width: $vp-1200 - 1) {
+    width: 82px;
+    height: 17px;
+  }
+
+  @media (max-width: $vp-768 - 1) {
+    width: 68px;
+    height: 15px;
+  }
+}
