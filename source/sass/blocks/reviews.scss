@@ -1,0 +1,144 @@
+.reviews {
+  padding-bottom: 120px;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  & h2 {
+    margin: 0;
+    margin-bottom: 60px;
+
+    font-family: $ff-bebas;
+    font-weight: 400;
+    font-size: 49px;
+    line-height: 1;
+    text-align: center;
+  }
+
+  @media (max-width: $vp-1200 - 1) {
+    padding-bottom: 100px;
+
+    & h2 {
+      margin-bottom: 50px;
+      font-size: 42px;
+    }
+  }
+
+  @media (max-width: $vp-768 - 1) {
+    padding-bottom: 70px;
+
+    & h2 {
+      font-size: 32px;
+    }
+  }
+}
+
+.reviews__wrapper {
+  position: relative;
+  // display: flex;
+  // flex-direction: column;
+  // align-items: center;
+}
+
+.reviews__item {
+  width: 560px;
+  height: 242px;
+  padding: 60px;
+
+  display: grid;
+  grid-template-columns: auto 1fr;
+  grid-template-rows: repeat(2, auto);
+  column-gap: 30px;
+  row-gap: 10px;
+
+  color: $color-default-white;
+  background-color: #1C3374;
+  box-shadow: 0px 0px 40px rgba(28, 51, 116, 0.2);
+
+  @media (max-width: $vp-1200 - 1) {
+    width: 566px;
+  }
+
+  @media (max-width: $vp-768 - 1) {
+    width: 226px;
+    height: 335px;
+    padding: 40px 25px;
+
+    grid-template-columns: repeat(2, 1fr);
+    justify-items: center;
+    gap: 15px;
+
+    & img {
+      width: 68px;
+      height: auto;
+      grid-row: auto;
+    }
+
+    & p {
+      grid-column: 1 / -1;
+      text-align: center;
+    }
+  }
+
+  & img {
+    grid-row: 1 / -1;
+  }
+
+  & h3 {
+    margin: 0;
+    font-size: 20px;
+    line-height: 1.5;
+  }
+
+  & p {
+    margin: 0;
+    line-height: 1.4;
+  }
+}
+
+.reviews__control {
+  position: absolute;
+  top: 50%;
+
+  padding: 0;
+  width: 50px;
+  height: 50px;
+
+  border: none;
+  background-color: transparent;
+  background-repeat: no-repeat;
+  background-position: center;
+  transform: translateY(-50%);
+  transition: transform $trans-default;
+  cursor: pointer;
+
+  &--left {
+    left: -70px;
+    background-image: url(../../img/svg/arrow-left.svg);
+
+    @media (max-width: $vp-768 - 1) {
+      left: -50px;
+    }
+  }
+
+  &--right {
+    right: -70px;
+    background-image: url(../../img/svg/arrow-right.svg);
+
+    @media (max-width: $vp-768 - 1) {
+      right: -50px;
+    }
+  }
+
+  @media (hover: hover), screen and (min-width: 0\0) {
+    &:hover,
+    &:focus {
+      transform: scale(1.2) translateY(-50%);
+    }
+  }
+
+  @media (max-width: $vp-768 - 1) {
+    background-size: 10px 19px;
+  }
+}
