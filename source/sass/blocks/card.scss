@@ -74,6 +74,7 @@
 
   & img {
     display: inline-block;
+    vertical-align: middle;
 
     @media (max-width: $vp-768 - 1) {
       width: 24px;
