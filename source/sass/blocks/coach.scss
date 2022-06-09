@@ -2,17 +2,16 @@
   position: relative;
   cursor: pointer;
 
+  width: 260px;
+  height: 294px;
+
   @media (max-width: $vp-1200 - 1) {
-    &--tablet-noshow {
-      display: none;
-    }
+    width: 268px;
   }
 
   @media (max-width: $vp-768 - 1) {
-    &--tablet-noshow,
-    &--mobile-noshow {
-      display: none;
-    }
+    width: 226px;
+    height: 274px;
   }
 
   @media (hover: hover), screen and (min-width: 0\0) {

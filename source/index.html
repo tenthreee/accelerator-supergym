@@ -158,9 +158,9 @@
 
         <section class="coaches container">
           <h2>Тренеры</h2>
-          <div class="coaches__wrapper swiper">
-            <ul class="coaches__list swiper-wrapper">
-              <li>
+          <div class="coaches__container">
+            <div class="coaches__wrapper swiper">
+              <div class="coaches__list swiper-wrapper">
                 <article class="coach swiper-slide">
                   <!-- 1x: 260px; 2x: 520px -->
                   <img src="./img/coach-anna.jpg" srcset="./img/coach-anna@2x.jpg" width="260" height="294" alt="">
@@ -175,8 +175,7 @@
                     </ul>
                   </div>
                 </article>
-              </li>
-              <li>
+
                 <article class="coach coach--mobile-noshow swiper-slide">
                   <!-- 1x: 260px; 2x: 520px -->
                   <img src="./img/coach-alex.jpg" srcset="./img/coach-alex@2x.jpg" width="260" height="294" alt="">
@@ -191,8 +190,7 @@
                     </ul>
                   </div>
                 </article>
-              </li>
-              <li>
+
                 <article class="coach coach--mobile-noshow coach--tablet-noshow swiper-slide">
                   <!-- 1x: 260px; 2x: 520px -->
                   <img src="./img/coach-alexndr.jpg" srcset="./img/coach-alexndr@2x.jpg" width="260" height="294" alt="">
@@ -207,8 +205,7 @@
                     </ul>
                   </div>
                 </article>
-              </li>
-              <li>
+
                 <article class="coach coach--mobile-noshow coach--tablet-noshow swiper-slide">
                   <!-- 1x: 260px; 2x: 520px -->
                   <img src="./img/coach-maria.jpg" srcset="./img/coach-maria@2x.jpg" width="260" height="294" alt="">
@@ -223,9 +220,8 @@
                     </ul>
                   </div>
                 </article>
-              </li>
-              <li>
-                <article class="coach coach--noshow swiper-slide">
+
+                <article class="coach swiper-slide">
                   <!-- 1x: 260px; 2x: 520px -->
                   <img src="./img/coach-anna.jpg" srcset="./img/coach-anna@2x.jpg" width="260" height="294" alt="">
                   <h3>Анна Павлова</h3>
@@ -239,9 +235,8 @@
                     </ul>
                   </div>
                 </article>
-              </li>
-              <li>
-                <article class="coach coach--noshow swiper-slide">
+
+                <article class="coach coach--mobile-noshow swiper-slide">
                   <!-- 1x: 260px; 2x: 520px -->
                   <img src="./img/coach-alex.jpg" srcset="./img/coach-alex@2x.jpg" width="260" height="294" alt="">
                   <h3>Алексей Лавров</h3>
@@ -255,9 +250,8 @@
                     </ul>
                   </div>
                 </article>
-              </li>
-              <li>
-                <article class="coach coach--noshow swiper-slide">
+
+                <article class="coach coach--mobile-noshow coach--tablet-noshow swiper-slide">
                   <!-- 1x: 260px; 2x: 520px -->
                   <img src="./img/coach-alexndr.jpg" srcset="./img/coach-alexndr@2x.jpg" width="260" height="294" alt="">
                   <h3>Александр Пашков</h3>
@@ -271,9 +265,8 @@
                     </ul>
                   </div>
                 </article>
-              </li>
-              <li>
-                <article class="coach coach--noshow swiper-slide">
+
+                <article class="coach coach--mobile-noshow coach--tablet-noshow swiper-slide">
                   <!-- 1x: 260px; 2x: 520px -->
                   <img src="./img/coach-maria.jpg" srcset="./img/coach-maria@2x.jpg" width="260" height="294" alt="">
                   <h3>Мария Кетова</h3>
@@ -287,12 +280,13 @@
                     </ul>
                   </div>
                 </article>
-              </li>
-            </ul>
-            <button class="coaches__control coaches__control--left swiper-button-prev" type="button">
+              </div>
+            </div>
+
+            <button class="coaches__control coaches__control--prev swiper-button-prev" type="button">
               <span class="visually-hidden">Показать следующих тренеров</span>
             </button>
-            <button class="coaches__control coaches__control--right swiper-button-next" type="button">
+            <button class="coaches__control coaches__control--next swiper-button-next" type="button">
               <span class="visually-hidden">Показать предыдущих тренеров</span>
             </button>
           </div>
@@ -390,19 +384,29 @@
 
         <section class="reviews container">
           <h2>Отзывы</h2>
-          <div class="reviews__wrapper">
-            <div class="reviews__list">
-              <div class="reviews__item">
-                <!-- 1x: 80px; 2x: 160px -->
-                <img src="./img/review.png" srcset="./img/review@2x.png" width="80" height="80" alt="">
-                <h3>Анна Орлова</h3>
-                <p>«Хожу в SuperClub уже больше года. Нравится, что в клубе всегда чисто, тренажеры обновляют, персонал дружелюбный. Зал просторный, даже в вечернее время нет очередей»</p>
+          <div class="reviews__container">
+            <div class="reviews__wrapper swiper">
+              <div class="reviews__list swiper-wrapper">
+                <div class="reviews__item swiper-slide">
+                  <!-- 1x: 80px; 2x: 160px -->
+                  <img src="./img/review.png" srcset="./img/review@2x.png" width="80" height="80" alt="">
+                  <h3>Анна Орлова</h3>
+                  <p>«Хожу в SuperClub уже больше года. Нравится, что в клубе всегда чисто, тренажеры обновляют, персонал дружелюбный. Зал просторный, даже в вечернее время нет очередей»</p>
+                </div>
+
+                <div class="reviews__item swiper-slide">
+                  <!-- 1x: 80px; 2x: 160px -->
+                  <img src="./img/review.png" srcset="./img/review@2x.png" width="80" height="80" alt="">
+                  <h3>Анна Орлова</h3>
+                  <p>«Хожу в SuperClub уже больше года. Нравится, что в клубе всегда чисто, тренажеры обновляют, персонал дружелюбный. Зал просторный, даже в вечернее время нет очередей»</p>
+                </div>
               </div>
             </div>
-            <button class="reviews__control reviews__control--left swiper-button-prev" type="button">
+
+            <button class="reviews__control reviews__control--prev swiper-button-prev" type="button">
               <span class="visually-hidden">Показать следующий отзыв</span>
             </button>
-            <button class="reviews__control reviews__control--right swiper-button-next" type="button">
+            <button class="reviews__control reviews__control--next swiper-button-next" type="button">
               <span class="visually-hidden">Показать предыдущий отзыв</span>
             </button>
           </div>
