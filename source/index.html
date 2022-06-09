@@ -85,11 +85,7 @@
           </div>
 
           <div class="gym__video">
-            <!-- <video poster="./img/video.jpg" width="364" height="228">
-              <source src="https://www.youtube.com/watch?v=9TZXsZItgdw">
-            </video> -->
-            <!-- <a href=""></a> -->
-            <button class="gym__play-btn" type="button">
+            <button class="gym__play-btn" type="button" data-open-modal="video">
               <span class="visually-hidden">Запустить видео</span>
             </button>
           </div>
@@ -577,11 +573,13 @@
       </div>
     </div>
 
-    <div class="modal modal--preload modal--fit-content modal--no-scale" data-modal="success">
+    <div class="modal modal--preload modal--fit-content modal--no-scale" data-modal="video">
       <div class="modal__wrapper">
         <div class="modal__overlay" data-close-modal></div>
         <div class="modal__content">
-          <p class="modal__description">Размер этой модалки зависит от ширины контента,<br> отключена анимация-скейл</p>
+          <div data-iframe data-auto-play>
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/9TZXsZItgdw?enablejsapi=1" title="YouTube video player" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+          </div>
           <button class="modal__close-btn btn-reset" type="button" aria-label="Закрыть попап" data-close-modal>
             <svg width="15" height="15">
               <use xlink:href="img/sprite_auto.svg#icon-close"></use>
