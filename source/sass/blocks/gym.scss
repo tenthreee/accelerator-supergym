@@ -121,11 +121,6 @@
   width: 364px;
   height: 228px;
 
-  background-image: url("../../img/video.jpg");
-  background-color: $color-ghost-white;
-  background-repeat: no-repeat;
-  background-position: center;
-
   @media (max-width: $vp-1200 - 1) {
     bottom: 100px;
     right: auto;
@@ -144,6 +139,15 @@
 
     margin-top: 40px;
     width: 100%;
+  }
+}
+
+.gym__video-preview img {
+  object-fit: cover;
+
+  @media (max-width: $vp-1200 - 1) {
+    width: 100%;
+    height: 167px;
   }
 }
 

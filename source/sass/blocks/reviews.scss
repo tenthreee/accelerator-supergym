@@ -83,7 +83,8 @@
     justify-items: center;
     gap: 15px;
 
-    & img {
+    & img,
+    & picture {
       width: 68px;
       height: auto;
       grid-row: auto;
@@ -95,7 +96,8 @@
     }
   }
 
-  & img {
+  & img,
+  & picture {
     grid-row: 1 / -1;
   }
 
