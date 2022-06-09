@@ -1,5 +1,5 @@
 .contacts__wrapper {
-  border-top: 1px solid #74819C;
+  border-top: 1px solid $color-slate-grey;
   background-image: linear-gradient(to right, $color-sapphire 0% 50%, $color-default-white 50% 100%);
 
   @media (max-width: $vp-1200 - 1) {
@@ -92,7 +92,7 @@
 
   &--left {
     // padding-right: 40px;
-    border-right: 1px solid #74819C;
+    border-right: 1px solid $color-slate-grey;
 
     @media (max-width: $vp-768 - 1) {
       border: none;

@@ -67,7 +67,7 @@
   row-gap: 10px;
 
   color: $color-default-white;
-  background-color: #1C3374;
+  background-color: $color-resolution-blue;
   // box-shadow: 0px 0px 40px rgba(28, 51, 116, 0.2);
 
   @media (max-width: $vp-1200 - 1) {
