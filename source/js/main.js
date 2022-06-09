@@ -3,6 +3,7 @@ import {initModals} from './modules/modals/init-modals';
 import {initTabs} from './modules/tabs/init-tabs';
 import {initFormValidate} from './modules/form-validate/init-form-validate';
 import './modules/anchors';
+import './modules/local-storage';
 
 // ---------------------------------
 
