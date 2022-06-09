@@ -96,39 +96,97 @@
         </section>
 
         <section class="membership" id="membership">
-          <div class="membership__wrapper container">
+          <div class="container">
             <h2 class="membership__title">Абонементы</h2>
-            <div class="membership__controls">
-              <button class="membership__control membership__control--current" type="button">1 месяц</button>
-              <button class="membership__control" type="button">6 месяцев</button>
-              <button class="membership__control" type="button">12 месяцев</button>
-            </div>
-            <div class="membership__tabs">
-              <div class="membership__tab">
-                <article class="card">
-                  <h3>С тренером</h3>
-                  <span>12 занятий</span>
-                  <p id="5000">5000
-                    <img src="./img/svg/rubble.svg" alt="Rubble." width="30" height="42">
-                  </p>
-                  <a class="card__button" href="#">Купить абонемент</a>
-                </article>
-                <article class="card card--current">
-                  <h3>Дневной</h3>
-                  <span>с 8:00 до 17:00</span>
-                  <p id="1700">1700
-                    <img src="./img/svg/rubble.svg" alt="Rubble." width="30" height="42">
-                  </p>
-                  <a class="card__button" href="#">Купить абонемент</a>
-                </article>
-                <article class="card">
-                  <h3>Полный день</h3>
-                  <span>с 8:00 до 22:00 </span>
-                  <p id="2700">2700
-                    <img src="./img/svg/rubble.svg" alt="Rubble." width="30" height="42">
-                  </p>
-                  <a class="card__button" href="#">Купить абонемент</a>
-                </article>
+
+            <div class="membership__wrapper" data-tabs="parent">
+              <div class="membership__controls" data-tabs="controls">
+                <button class="membership__control membership__control--current is-active" type="button" data-tabs="control">1 месяц</button>
+                <button class="membership__control" type="button" data-tabs="control">6 месяцев</button>
+                <button class="membership__control" type="button" data-tabs="control">12 месяцев</button>
+              </div>
+
+              <div class="membership__tabs" data-tabs="content">
+                <div class="membership__tab is-active" data-tabs="element">
+                  <article class="card">
+                    <h3>С тренером</h3>
+                    <span>12 занятий</span>
+                    <p id="5000">5000
+                      <img src="./img/svg/rubble.svg" alt="Rubble." width="30" height="42">
+                    </p>
+                    <a class="card__button" href="#">Купить абонемент</a>
+                  </article>
+                  <article class="card card--current">
+                    <h3>Дневной</h3>
+                    <span>с 8:00 до 17:00</span>
+                    <p id="1700">1700
+                      <img src="./img/svg/rubble.svg" alt="Rubble." width="30" height="42">
+                    </p>
+                    <a class="card__button" href="#">Купить абонемент</a>
+                  </article>
+                  <article class="card">
+                    <h3>Полный день</h3>
+                    <span>с 8:00 до 22:00 </span>
+                    <p id="2700">2700
+                      <img src="./img/svg/rubble.svg" alt="Rubble." width="30" height="42">
+                    </p>
+                    <a class="card__button" href="#">Купить абонемент</a>
+                  </article>
+                </div>
+
+                <div class="membership__tab" data-tabs="element">
+                  <article class="card">
+                    <h3>С тренером</h3>
+                    <span>12 занятий</span>
+                    <p id="27000">27000
+                      <img src="./img/svg/rubble.svg" alt="Rubble." width="30" height="42">
+                    </p>
+                    <a class="card__button" href="#">Купить абонемент</a>
+                  </article>
+                  <article class="card card--current">
+                    <h3>Дневной</h3>
+                    <span>с 8:00 до 17:00</span>
+                    <p id="9100">9100
+                      <img src="./img/svg/rubble.svg" alt="Rubble." width="30" height="42">
+                    </p>
+                    <a class="card__button" href="#">Купить абонемент</a>
+                  </article>
+                  <article class="card">
+                    <h3>Полный день</h3>
+                    <span>с 8:00 до 22:00 </span>
+                    <p id="14500">14500
+                      <img src="./img/svg/rubble.svg" alt="Rubble." width="30" height="42">
+                    </p>
+                    <a class="card__button" href="#">Купить абонемент</a>
+                  </article>
+                </div>
+
+                <div class="membership__tab" data-tabs="element">
+                  <article class="card">
+                    <h3>С тренером</h3>
+                    <span>12 занятий</span>
+                    <p id="48000">48000
+                      <img src="./img/svg/rubble.svg" alt="Rubble." width="30" height="42">
+                    </p>
+                    <a class="card__button" href="#">Купить абонемент</a>
+                  </article>
+                  <article class="card card--current">
+                    <h3>Дневной</h3>
+                    <span>с 8:00 до 17:00</span>
+                    <p id="16300">16300
+                      <img src="./img/svg/rubble.svg" alt="Rubble." width="30" height="42">
+                    </p>
+                    <a class="card__button" href="#">Купить абонемент</a>
+                  </article>
+                  <article class="card">
+                    <h3>Полный день</h3>
+                    <span>с 8:00 до 22:00 </span>
+                    <p id="25900">25900
+                      <img src="./img/svg/rubble.svg" alt="Rubble." width="30" height="42">
+                    </p>
+                    <a class="card__button" href="#">Купить абонемент</a>
+                  </article>
+                </div>
               </div>
             </div>
           </div>
@@ -423,7 +481,7 @@
                 </div>
                 <div class="free-class__group">
                   <label class="visually-hidden" for="user__tel">Телефон</label>
-                  <input type="tel" id="user__tel" placeholder="Телефон" required>
+                  <input type="tel" id="user__tel" placeholder="Телефон" required pattern="^((8|\+7)[\- ]?)?(\(?\d{3}\)?[\- ]?)?[\d\- ]{7,10}$">
                 </div>
                 <button class="free-class__button btn" type="submit">Отправить</button>
               </form>
