@@ -1,6 +1,7 @@
 import {iosVhFix} from './utils/ios-vh-fix';
 import {initModals} from './modules/modals/init-modals';
 import {initTabs} from './modules/tabs/init-tabs';
+import {initFormValidate} from './modules/form-validate/init-form-validate';
 import './modules/anchors';
 
 // ---------------------------------
@@ -20,6 +21,7 @@ window.addEventListener('DOMContentLoaded', () => {
   window.addEventListener('load', () => {
     initTabs();
     initModals();
+    initFormValidate();
   });
 });
 
