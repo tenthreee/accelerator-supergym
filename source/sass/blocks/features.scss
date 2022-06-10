@@ -15,7 +15,7 @@
 
   & h2 {
     margin: 0;
-    margin-bottom: 80px;
+    margin-bottom: 67px;
 
     font-family: $ff-bebas;
     font-weight: 400;
@@ -24,12 +24,13 @@
     text-align: center;
 
     @media (max-width: $vp-1200 - 1) {
+      margin-bottom: 46px;
       font-size: 42px;
       line-height: 42px;
     }
 
     @media (max-width: $vp-768 - 1) {
-      margin-bottom: 60px;
+      margin-bottom: 44px;
       font-size: 32px;
       line-height: 32px;
     }
@@ -59,12 +60,14 @@
   @media (max-width: $vp-1200 - 1) {
     grid-template-columns: 1fr 1fr;
     grid-template-rows: auto 239px auto;
-    gap: 50px;
+    column-gap: 30px;
+    row-gap: 42px;
   }
 
   @media (max-width: $vp-768 - 1) {
     grid-template-columns: auto;
     grid-template-rows: repeat(5, auto);
+    row-gap: 32px;
   }
 }
 
@@ -87,7 +90,7 @@
 
   width: 240px;
   height: 307px;
-  padding: 50px 30px;
+  padding: 54px 30px;
 
   text-align: center;
   color: $color-default-white;
@@ -100,7 +103,7 @@
 
     width: 442px;
     height: 239px;
-    padding: 40px 130px;
+    padding: 33px 130px;
   }
 
   @media (max-width: $vp-768 - 1) {
@@ -108,13 +111,20 @@
     grid-column: auto;
 
     width: 100vw;
-    padding: 50px 70px;
+    padding: 38px 70px;
+    margin-top: 9px;
+    margin-bottom: 9px;
   }
 
   & b {
+    margin-bottom: 7px;
     display: block;
     font-size: 74px;
     line-height: 1;
+
+    @media (max-width: $vp-1200 - 1) {
+      margin-bottom: 0;
+    }
   }
 
   & span {
@@ -129,7 +139,7 @@
 
   & p {
     margin: 0;
-    margin-top: 50px;
+    margin-top: 38px;
 
     @media (max-width: $vp-1200 - 1) {
       margin-top: 10px;
@@ -180,36 +190,47 @@
   }
 
   & span {
+    display: block;
+    margin-top: -9px;
     font-size: 14px;
     color: $color-persian-blue;
+
+    @media (max-width: $vp-768 - 1) {
+      margin-top: -6px;
+    }
   }
 }
 
 .features__text {
   @media (max-width: $vp-768 - 1) {
-    margin-top: 10px;
+    margin-top: 9px;
     text-align: center;
   }
 
   & h3 {
     margin: 0;
-    margin-top: 5px;
+    // margin-top: 5px;
     margin-bottom: 20px;
     font-size: 22px;
     line-height: 1;
 
     @media (max-width: $vp-1200 - 1) {
+      margin-bottom: 4px;
       font-size: 22px;
     }
 
     @media (max-width: $vp-768 - 1) {
       margin: 0;
-      margin-bottom: 10px;
+      margin-bottom: 5px;
     }
   }
 
   & p {
     margin: 0;
     font-weight: 300;
+
+    @media (max-width: $vp-768 - 1) {
+      margin: 0 20px;
+    }
   }
 }

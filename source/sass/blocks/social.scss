@@ -5,11 +5,19 @@
 
   display: flex;
   align-items: center;
+
+  @media (max-width: $vp-1200 - 1) {
+    gap: 20px;
+  }
+
+  @media (max-width: $vp-768 - 1) {
+    gap: 35px;
+  }
 }
 
 .social__link {
   display: block;
-  padding: 10px 15px;
+  padding: 6px 9px;
   transition: opacity $trans-default;
 
   @media (hover: hover), screen and (min-width: 0\0) {
@@ -20,6 +28,20 @@
   }
 
   @media (max-width: $vp-1200 - 1) {
-    padding: 10px;
+    padding: 10px 0;
+  }
+
+  @media (max-width: $vp-768 - 1) {
+    &--vk img {
+      width: 32px;
+    }
+
+    &--insta img {
+      width: 27px;
+    }
+
+    &--fb img {
+      width: 14px;
+    }
   }
 }

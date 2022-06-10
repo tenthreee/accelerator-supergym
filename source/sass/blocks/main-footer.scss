@@ -1,10 +1,10 @@
 .main-footer {
-  padding: 40px 0;
+  padding: 34px 0;
   color: $color-default-white;
   background-color: $color-black-russian;
 
   @media (max-width: $vp-1200 - 1) {
-    padding: 45px 0;
+    // padding: 45px 0;
   }
 
   @media (max-width: $vp-768 - 1) {

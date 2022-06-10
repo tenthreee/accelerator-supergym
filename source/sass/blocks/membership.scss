@@ -61,7 +61,7 @@
 
 .membership__title {
   margin: 0;
-  margin-bottom: 53px;
+  margin-bottom: 34px;
 
   text-align: center;
   font-family: $ff-bebas;
@@ -71,14 +71,14 @@
   text-transform: uppercase;
 
   @media (max-width: $vp-1200 - 1) {
-    margin-bottom: 45px;
+    margin-bottom: 29px;
 
     font-size: 42px;
     line-height: 42px;
   }
 
   @media (max-width: $vp-768 - 1) {
-    margin-bottom: 35px;
+    margin-bottom: 20px;
 
     font-size: 32px;
     line-height: 32px;
@@ -102,7 +102,7 @@
 .membership__control {
   position: relative;
   padding: 0;
-  padding-bottom: 20px;
+  padding-bottom: 10px;
 
   font-size: 20px;
   line-height: 1.5;
@@ -125,6 +125,7 @@
   }
 
   @media (max-width: $vp-768 - 1) {
+    padding-bottom: 13px;
     font-size: 16px;
 
     &:not(:last-of-type) {
@@ -151,6 +152,7 @@
 .membership__tabs {
   display: flex;
   align-items: center;
+  justify-content: center;
 }
 
 .membership__tab {
@@ -159,5 +161,9 @@
 
   @media (max-width: $vp-1200 - 1) {
     flex-direction: column;
+  }
+
+  @media (max-width: $vp-768 - 1) {
+    gap: 35px;
   }
 }

@@ -3,17 +3,18 @@
   justify-content: space-between;
 
   @media (max-width: $vp-1200 - 1) {
-    margin-bottom: 25px;
+    margin-bottom: 18px;
   }
 
   @media (max-width: $vp-768 - 1) {
-    margin-bottom: 80px;
+    margin-bottom: 72px;
   }
 }
 
 .navigation__link {
   font-family: $ff-bebas;
   font-size: 24px;
+  letter-spacing: 1.5px;
   color: $color-default-white;
   transition: opacity $trans-default;
 
