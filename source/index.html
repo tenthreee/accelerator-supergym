@@ -33,7 +33,7 @@
                   <li>Кардио-зона</li>
                 </ul>
               </div>
-              <a class="hero__button btn" href="#membership">Купить абонемент</a>
+              <a class="hero__button btn" href="#membership" data-navigation-link>Купить абонемент</a>
             </div>
 
             <div class="hero__image">
@@ -63,7 +63,7 @@
       </header>
 
       <main>
-        <section class="gym container">
+        <section class="gym container" id="gym">
           <div class="gym__text">
             <h2>Тренажерный зал</h2>
             <b>Просторный зал площадью 900 кв/м</b>
@@ -218,7 +218,7 @@
           </div>
         </section>
 
-        <section class="coaches container">
+        <section class="coaches container" id="coaches">
           <h2>Тренеры</h2>
           <div class="coaches__container">
             <div class="coaches__wrapper swiper">
@@ -431,7 +431,7 @@
           </div>
         </section>
 
-        <section class="promo container">
+        <section class="promo container" id="promo">
           <h2>Акции</h2>
           <div class="promo__wrapper">
             <div class="promo__block">
@@ -561,12 +561,12 @@
           <nav class="footer-navigation">
             <div class="footer-navigation__list">
               <div class="footer-navigation__column footer-navigation__column--left">
-                <a class="footer-navigation__link" href="#">Услуги</a>
-                <a class="footer-navigation__link" href="#">Абонементы</a>
+                <a class="footer-navigation__link" href="#gym" data-navigation-link>Услуги</a>
+                <a class="footer-navigation__link"  href="#membership" data-navigation-link>Абонементы</a>
               </div>
               <div class="footer-navigation__column">
-                <a class="footer-navigation__link" href="#">Акции</a>
-                <a class="footer-navigation__link" href="#">Тренеры</a>
+                <a class="footer-navigation__link" href="#promo" data-navigation-link>Акции</a>
+                <a class="footer-navigation__link" href="#coaches" data-navigation-link>Тренеры</a>
                 <a class="footer-navigation__link" href="#">Расписание</a>
               </div>
             </div>
