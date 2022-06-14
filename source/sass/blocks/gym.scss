@@ -125,14 +125,14 @@
 
 .gym__video {
   position: absolute;
-  bottom: 120px;
-  right: 379px;
+  top: 408px;
+  right: 429px;
 
   width: 364px;
   height: 228px;
 
   @include vp-1199 {
-    bottom: 100px;
+    top: 587px;
     right: auto;
     left: 50%;
 

@@ -36,12 +36,11 @@
 
 .promo__wrapper {
   display: grid;
-  grid-template-columns: repeat(2, 560px);
+  grid-template-columns: repeat(2, 1fr);
   grid-template-rows: 1fr 1fr;
   gap: 40px;
 
   @include vp-1199 {
-    grid-template-columns: repeat(2, 1fr);
     grid-template-rows: repeat(2, auto);
     gap: 30px;
   }
