@@ -1,34 +1,34 @@
 .coaches {
   padding-bottom: 120px;
 
-  @media (max-width: $vp-1200 - 1) {
+  @include vp-1199 {
     padding-bottom: 100px;
   }
 
-  @media (max-width: $vp-768 - 1) {
+  @include vp-767 {
     padding-bottom: 70px;
   }
+}
 
-  & h2 {
-    margin: 0;
-    margin-bottom: 48px;
+.coaches__title {
+  margin: 0;
+  margin-bottom: 48px;
 
-    font-family: $ff-bebas;
-    font-weight: 400;
-    font-size: 49px;
-    line-height: 49px;
+  font-family: $ff-bebas;
+  font-weight: 400;
+  font-size: 49px;
+  line-height: 49px;
 
-    @media (max-width: $vp-1200 - 1) {
-      margin-bottom: 40px;
-      text-align: center;
-      font-size: 42px;
-      line-height: 42px;
-    }
+  @include vp-1199 {
+    margin-bottom: 40px;
+    text-align: center;
+    font-size: 42px;
+    line-height: 42px;
+  }
 
-    @media (max-width: $vp-768 - 1) {
-      font-size: 32px;
-      line-height: 32px;
-    }
+  @include vp-767 {
+    font-size: 32px;
+    line-height: 32px;
   }
 }
 
@@ -36,11 +36,11 @@
   position: relative;
   margin: 0 auto;
 
-  @media (max-width: $vp-1200 - 1) {
+  @include vp-1199 {
     width: 566px;
   }
 
-  @media (max-width: $vp-768 - 1) {
+  @include vp-767 {
     width: 226px;
   }
 }
@@ -48,6 +48,12 @@
 .coaches__wrapper {
   overflow: hidden;
   position: relative;
+}
+
+.coaches__list {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
 }
 
 .coaches__control {
@@ -72,25 +78,23 @@
   &::after {
     font-size: 35px;
 
-    @media (max-width: $vp-768 - 1) {
+    @include vp-767 {
       font-size: 20px;
     }
   }
 
   &--prev {
     left: -70px;
-    // background-image: url(../../img/svg/arrow-left.svg);
 
-    @media (max-width: $vp-768 - 1) {
+    @include vp-767 {
       left: -50px;
     }
   }
 
   &--next {
     right: -70px;
-    // background-image: url(../../img/svg/arrow-right.svg);
 
-    @media (max-width: $vp-768 - 1) {
+    @include vp-767 {
       right: -50px;
     }
   }
@@ -98,11 +102,11 @@
   @media (hover: hover), screen and (min-width: 0\0) {
     &:hover,
     &:focus {
-      transform: scale(1.2) translateY(-50%);
+      transform: translateY(-50%) scale(1.2);
     }
   }
 
-  @media (max-width: $vp-768 - 1) {
+  @include vp-767 {
     background-size: 10px 19px;
   }
 }

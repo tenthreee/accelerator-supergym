@@ -11,46 +11,45 @@
     position: absolute;
     z-index: 0;
     content: "";
-    bottom: -150px;
-    right: 0;
+    bottom: -93px;
+    right: calc((100vw - 1200px - 385px) / 2);
 
-    width: 287px;
-    height: 494px;
+    width: 322px;
+    height: 385px;
 
     background-image: url("../../img/weights.png");
     background-repeat: no-repeat;
     background-position: center;
+    background-size: 322px auto;
+    transform: rotate(150deg);
 
-    @media (min-resolution: 2dppx) and (min-width: $vp-1200) {
+    @include retina {
       background-image: url("../../img/weights@2x.png");
-      background-size: 287px auto;
     }
-  }
 
-  @media (max-width: $vp-1200 - 1) {
-    padding-top: 100px;
-    padding-bottom: 100px;
+    @include vp-1199 {
+      bottom: -76px;
+      right: calc((100vw - 783px) / 2);
 
-    &::after {
-      bottom: -130px;
-      width: 347px;
-      height: 444px;
-      background-image: url("../../img/weights_tablet.png");
+      width: 289px;
+      height: 345px;
 
-      @media (min-resolution: 2dppx) {
-        background-image: url("../../img/weights_tablet@2x.png");
-        background-size: 347px auto;
-      }
+      background-size: 289px auto;
     }
-  }
 
-  @media (max-width: $vp-768 - 1) {
-    padding-top: 70px;
-    padding-bottom: 70px;
-
-    &::after {
+    @include vp-767 {
       display: none;
     }
+  }
+
+  @include vp-1199 {
+    padding-top: 100px;
+    padding-bottom: 100px;
+  }
+
+  @include vp-767 {
+    padding-top: 70px;
+    padding-bottom: 70px;
   }
 }
 
@@ -70,14 +69,14 @@
   line-height: 49px;
   text-transform: uppercase;
 
-  @media (max-width: $vp-1200 - 1) {
+  @include vp-1199 {
     margin-bottom: 29px;
 
     font-size: 42px;
     line-height: 42px;
   }
 
-  @media (max-width: $vp-768 - 1) {
+  @include vp-767 {
     margin-bottom: 20px;
 
     font-size: 32px;
@@ -90,11 +89,11 @@
   border-bottom: 2px solid rgba(120, 120, 120, 0.2);
   align-self: center;
 
-  @media (max-width: $vp-1200 - 1) {
+  @include vp-1199 {
     margin-bottom: 45px;
   }
 
-  @media (max-width: $vp-768 - 1) {
+  @include vp-767 {
     margin-bottom: 35px;
   }
 }
@@ -116,7 +115,7 @@
     margin-right: 46px;
   }
 
-  @media (max-width: $vp-1200 - 1) {
+  @include vp-1199 {
     font-size: 18px;
 
     &:not(:last-of-type) {
@@ -124,7 +123,7 @@
     }
   }
 
-  @media (max-width: $vp-768 - 1) {
+  @include vp-767 {
     padding-bottom: 13px;
     font-size: 16px;
 
@@ -133,7 +132,7 @@
     }
   }
 
-  &.is-active {
+  .is-active {
     opacity: 1;
 
     &::after {
@@ -159,11 +158,165 @@
   display: flex;
   gap: 40px;
 
-  @media (max-width: $vp-1200 - 1) {
+  @include vp-1199 {
     flex-direction: column;
   }
 
-  @media (max-width: $vp-768 - 1) {
+  @include vp-767 {
     gap: 35px;
+  }
+}
+
+.membership__card {
+  z-index: 1;
+  display: flex;
+  flex-direction: column;
+  width: 360px;
+  min-height: 448px;
+  padding: 55px 70px;
+
+  background-color: $color-default-white;
+  cursor: pointer;
+
+  border: 10px solid transparent;
+  border-image-slice: 1;
+  border-width: 7px;
+
+  transition: border-image-source $trans-default;
+
+  @include vp-1199 {
+    width: 442px;
+  }
+
+  @include vp-767 {
+    width: 290px;
+    min-height: 384px;
+    padding: 42px 35px;
+  }
+
+  &--current,
+  &:hover {
+    border-image-source: $main-gradient;
+
+    .membership__card-button {
+      color: $color-default-white;
+      border-color: transparent;
+      background: $main-gradient;
+    }
+  }
+}
+
+.membership__card-title {
+  margin: 0;
+  margin-bottom: 9px;
+  font-size: 26px;
+  line-height: 29px;
+
+  @include vp-767 {
+    font-size: 22px;
+    line-height: 24px;
+  }
+}
+
+.membership__card-type {
+  display: block;
+  margin-bottom: 64px;
+
+  @include vp-1199 {
+    margin-bottom: 67px;
+  }
+
+  @include vp-767 {
+    margin-bottom: 56px;
+  }
+}
+
+.membership__card-price {
+  z-index: 1;
+  position: relative;
+  margin: 0;
+  padding-right: 44px;
+
+  color: $color-egyptian-blue;
+  font-weight: 700;
+  font-size: 60px;
+  line-height: 1.5;
+
+  &::before {
+    position: absolute;
+    z-index: -1;
+    content: attr(data-price);
+    bottom: 0;
+    left: 50%;
+
+    color: $color-whisper;
+    font-size: 100px;
+    line-height: 1.5;
+    transform: translateX(-50%);
+  }
+
+  &::after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    right: 20px;
+
+    width: 30px;
+    height: 42px;
+
+    background-image: url("../../img/svg/rubble.svg");
+    transform: translateY(-50%);
+
+    @include vp-1199 {
+      right: 61px;
+    }
+
+    @include vp-767 {
+      right: 35px;
+      width: 24px;
+      height: 33px;
+      background-size: 24px auto;
+    }
+  }
+
+  @include vp-767 {
+    padding-right: 31px;
+    font-size: 48px;
+
+    &::before {
+      font-size: 80px;
+    }
+  }
+}
+
+.membership__card-button {
+  display: block;
+  padding: 24px;
+  margin-top: 35px;
+
+  font-size: 12px;
+  line-height: 14px;
+  font-weight: 700;
+  text-align: center;
+  text-transform: uppercase;
+  color: $color-sapphire;
+
+  border: 2px solid $color-sapphire;
+  transition: opacity $trans-default, color $trans-default;
+
+  @media (hover: hover), screen and (min-width: 0\0) {
+    &:hover,
+    &:focus {
+      opacity: 0.8;
+    }
+  }
+
+  @include vp-1199 {
+    align-self: center;
+    min-width: 206px;
+  }
+
+  @include vp-767 {
+    margin-top: 29px;
   }
 }

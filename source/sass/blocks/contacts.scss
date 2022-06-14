@@ -1,33 +1,131 @@
-.contacts__wrapper {
+.contacts {
   border-top: 1px solid $color-slate-grey;
   background-image: linear-gradient(to right, $color-sapphire 0% 50%, $color-default-white 50% 100%);
 
-  @media (max-width: $vp-1200 - 1) {
+  @include vp-1199 {
     border: none;
-    background-image: linear-gradient(to bottom, $color-sapphire 0% 48%, $color-default-white 48% 100%);
+    background-image: none;
+    // background-image: linear-gradient(to bottom, $color-sapphire 0% 48%, $color-default-white 48% 100%);
   }
 
-  @media (max-width: $vp-768 - 1) {
+  @include vp-767 {
     background-image: none;
   }
 }
 
-.contacts__group {
+.contacts__wrapper {
   display: grid;
   grid-template-columns: 1fr 1fr;
 
-  @media (max-width: $vp-1200 - 1) {
+  @include vp-1199 {
     grid-template-columns: 1fr;
-    grid-template-rows: 324px 351px;
+    grid-template-rows: minmax(324px, auto) minmax(351px, auto);
   }
 
-  @media (max-width: $vp-768 - 1) {
+  @include vp-767 {
     padding: 0;
-    grid-template-rows: 386px 507px;
+    grid-template-rows: minmax(386px, auto) minmax(507px, auto);
   }
 }
 
-.contacts {
+.contacts__user {
+  position: relative;
+  padding-top: 70px;
+  padding-bottom: 70px;
+  padding-right: 170px;
+
+  color: $color-default-white;
+  background-color: $color-sapphire;
+
+  @include vp-1199 {
+    padding-left: 88px;
+    padding-right: 118px;
+
+    &::before {
+      content: "";
+      position: absolute;
+      z-index: -1;
+      top: 0;
+      left: calc((100vw - 100% + 90px) / 4 * -1);
+
+      width: 100vw;
+      height: 100%;
+      background-color: $color-sapphire;
+    }
+  }
+
+  @include vp-767 {
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+
+  form {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto auto;
+    gap: 30px;
+
+    @include vp-1199 {
+      width: 100%;
+    }
+
+    @include vp-767 {
+      grid: none;
+      gap: 36px;
+    }
+  }
+
+  input {
+    width: 100%;
+    padding-bottom: 5px;
+
+    color: $color-default-white;
+    border: none;
+    background-color: transparent;
+    border-bottom: 1px solid $color-slate-grey;
+
+    &::placeholder {
+      color: $color-default-white;
+    }
+
+    &:focus {
+      outline: none;
+      border-color: $color-default-white;
+    }
+  }
+
+  .is-invalid input {
+    border-color: $color-torch-red;
+  }
+}
+
+.contacts__user-title {
+  margin: 0;
+  margin-bottom: 38px;
+
+  font-family: $ff-bebas;
+  font-weight: 400;
+  font-size: 49px;
+  line-height: 49px;
+
+  @include vp-1199 {
+    margin-bottom: 31px;
+    font-size: 42px;
+    line-height: 42px;
+  }
+
+  @include vp-767 {
+    font-size: 32px;
+    line-height: 32px;
+  }
+}
+
+.contacts__user-button {
+  grid-column: 1 / -1;
+  padding: 16px;
+}
+
+.contacts__gym {
   padding-top: 70px;
   padding-left: 120px;
   padding-bottom: 65px;
@@ -37,69 +135,93 @@
   grid-template-rows: auto auto;
   column-gap: 60px;
 
-  @media (max-width: $vp-1200 - 1) {
+  @include vp-1199 {
     padding-left: 88px;
     padding-right: 88px;
+    column-gap: 50px;
   }
 
-  @media (max-width: $vp-768 - 1) {
+  @include vp-767 {
     padding-right: 15px;
     padding-left: 15px;
-    grid-template-columns: auto;
-  }
-
-  & h2 {
-    grid-column: 1 / -1;
-    margin: 0;
-    margin-bottom: 38px;
-
-    font-family: $ff-bebas;
-    font-weight: 400;
-    font-size: 49px;
-    line-height: 49px;
-
-    @media (max-width: $vp-1200 - 1) {
-      margin-bottom: 15px;
-      font-size: 42px;
-      line-height: 42px;
-    }
-
-    @media (max-width: $vp-768 - 1) {
-      font-size: 32px;
-      line-height: 32px;
-    }
-  }
-
-  & b {
-    @media (max-width: $vp-1200 - 1) {
-      font-size: 20px;
-    }
-  }
-
-  & p {
-    margin: 0;
-    font-size: 14px;
-
-    @media (max-width: $vp-1200 - 1) {
-      margin-top: 10px;
-      margin-bottom: -10px;
-      font-size: 18px;
-    }
+    display: block;
   }
 }
 
-.contacts__column {
+.contacts__gym-title {
+  grid-column: 1 / -1;
+  margin: 0;
+  margin-bottom: 38px;
+
+  font-family: $ff-bebas;
+  font-weight: 400;
+  font-size: 49px;
+  line-height: 49px;
+
+  @include vp-1199 {
+    margin-bottom: 27px;
+    font-size: 42px;
+    line-height: 42px;
+  }
+
+  @include vp-767 {
+    margin-bottom: 37px;
+    font-size: 32px;
+    line-height: 32px;
+  }
+}
+
+.contacts__gym-subtitle {
+  margin: 0;
+
+  @include vp-1199 {
+    margin-bottom: 10px;
+    font-size: 20px;
+  }
+}
+
+.contacts__gym-info {
+  margin: 0;
+  font-size: 14px;
+  color: inherit;
+
+  @include vp-1199 {
+    margin-bottom: -10px;
+    font-size: 18px;
+  }
+}
+
+.contacts__gym-link {
+  margin: 0;
+  font-size: 14px;
+  color: inherit;
+  transition: opacity $trans-default;
+
+  @media (hover: hover), screen and (min-width: 0\0) {
+    &:hover,
+    &:focus {
+      opacity: 0.8;
+    }
+  }
+
+  @include vp-1199 {
+    margin-bottom: -10px;
+    font-size: 18px;
+  }
+}
+
+.contacts__gym-column {
   display: grid;
   grid-template-rows: auto auto;
   row-gap: 20px;
 
   &--left {
-    // padding-right: 40px;
     border-right: 1px solid $color-slate-grey;
 
-    @media (max-width: $vp-768 - 1) {
+    @include vp-767 {
       border: none;
-      margin-bottom: 20px;
+      margin-bottom: 35px;
+      row-gap: 34px;
     }
   }
 }
