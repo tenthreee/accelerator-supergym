@@ -1929,7 +1929,7 @@ button,
   height: 100px;
   border: none;
   background-color: transparent;
-  background-image: url("../../img/svg/play.svg");
+  background-image: url("../img/svg/play.svg");
   -webkit-transform: translate(-50%, -50%);
   -ms-transform: translate(-50%, -50%);
   transform: translate(-50%, -50%);
@@ -2126,7 +2126,7 @@ button,
   right: 20px;
   width: 30px;
   height: 42px;
-  background-image: url("../../img/svg/rubble.svg");
+  background-image: url("../img/svg/rubble.svg");
   -webkit-transform: translateY(-50%);
   -ms-transform: translateY(-50%);
   transform: translateY(-50%);
