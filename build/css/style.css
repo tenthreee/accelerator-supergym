@@ -2425,40 +2425,16 @@ button,
   column-gap: 25px;
 }
 
-.feature__number {
-  position: relative;
-  margin: 0;
-  margin-top: -10px;
-  font-size: 71px;
-  line-height: 1;
-  font-weight: 700;
-  background-image: -o-linear-gradient(322.39deg, #d10a42 0%, #0041cc 45.58%);
-  background-image: linear-gradient(127.61deg, #d10a42 0%, #0041cc 45.58%);
-  background-size: 100%;
-  background-repeat: repeat;
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  -moz-background-clip: text;
-  -moz-text-fill-color: transparent;
+.feature--left {
+  padding-left: 25px;
 }
 
-.feature__sign {
-  display: block;
-  margin-top: -9px;
-  font-size: 14px;
-  color: #2e35ac;
-}
-
-.feature__title {
-  margin: 0;
-  margin-bottom: 8px;
-  font-size: 22px;
-  line-height: 1;
-}
-
-.feature__description {
-  margin: 0;
-  font-weight: 300;
+.feature--bottom {
+  -ms-flex-item-align: end;
+  -ms-grid-row-align: end;
+  align-self: end;
+  padding-top: 80px;
+  border-top: 2px solid rgba(237, 2, 51, 0.2);
 }
 
 .feature--accent {
@@ -2500,16 +2476,40 @@ button,
   margin: 0;
 }
 
-.feature--left {
-  padding-left: 25px;
+.feature__number {
+  position: relative;
+  margin: 0;
+  margin-top: -10px;
+  font-size: 71px;
+  line-height: 1;
+  font-weight: 700;
+  background-image: -o-linear-gradient(322.39deg, #d10a42 0%, #0041cc 45.58%);
+  background-image: linear-gradient(127.61deg, #d10a42 0%, #0041cc 45.58%);
+  background-size: 100%;
+  background-repeat: repeat;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  -moz-background-clip: text;
+  -moz-text-fill-color: transparent;
 }
 
-.feature--bottom {
-  -ms-flex-item-align: end;
-  -ms-grid-row-align: end;
-  align-self: end;
-  padding-top: 80px;
-  border-top: 2px solid rgba(237, 2, 51, 0.2);
+.feature__sign {
+  display: block;
+  margin-top: -9px;
+  font-size: 14px;
+  color: #2e35ac;
+}
+
+.feature__title {
+  margin: 0;
+  margin-bottom: 8px;
+  font-size: 22px;
+  line-height: 1;
+}
+
+.feature__description {
+  margin: 0;
+  font-weight: 300;
 }
 
 .promo {
@@ -2819,6 +2819,20 @@ button,
 .contacts__user input:focus {
   outline: none;
   border-color: #ffffff;
+}
+
+.contacts__user label {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+  overflow: hidden;
+  white-space: nowrap;
+  border: 0;
+  clip: rect(0 0 0 0);
+  -webkit-clip-path: inset(100%);
+  clip-path: inset(100%);
 }
 
 .contacts__user .is-invalid input {
@@ -3325,18 +3339,14 @@ button,
     column-gap: 29px;
   }
 
-  .feature__number {
-    margin-top: -3px;
-    font-size: 58px;
+  .feature--left {
+    padding-left: 0;
   }
 
-  .feature__sign {
-    margin-top: -6px;
-  }
-
-  .feature__title {
-    margin-bottom: 4px;
-    font-size: 22px;
+  .feature--bottom {
+    border: none;
+    padding-top: 0;
+    margin-top: 2px;
   }
 
   .feature--accent {
@@ -3359,14 +3369,18 @@ button,
     font-size: 22px;
   }
 
-  .feature--left {
-    padding-left: 0;
+  .feature__number {
+    margin-top: -3px;
+    font-size: 58px;
   }
 
-  .feature--bottom {
-    border: none;
-    padding-top: 0;
-    margin-top: 2px;
+  .feature__sign {
+    margin-top: -6px;
+  }
+
+  .feature__title {
+    margin-bottom: 4px;
+    font-size: 22px;
   }
 
   .promo {
@@ -3787,6 +3801,29 @@ button,
     justify-items: center;
   }
 
+  .feature--bottom {
+    -ms-flex-item-align: start;
+    -ms-grid-row-align: start;
+    align-self: start;
+  }
+
+  .feature--accent {
+    grid-row: auto;
+    grid-column: auto;
+    width: 100vw;
+    padding: 38px 70px;
+    margin-top: 9px;
+    margin-bottom: 9px;
+  }
+
+  .feature--accent .feature__number {
+    margin-bottom: 6px;
+  }
+
+  .feature--accent .feature__sign {
+    margin-bottom: 14px;
+  }
+
   .feature__numbers {
     margin-bottom: 10px;
     text-align: center;
@@ -3807,29 +3844,6 @@ button,
 
   .feature__description {
     margin: 0 20px;
-  }
-
-  .feature--accent {
-    grid-row: auto;
-    grid-column: auto;
-    width: 100vw;
-    padding: 38px 70px;
-    margin-top: 9px;
-    margin-bottom: 9px;
-  }
-
-  .feature--accent .feature__number {
-    margin-bottom: 6px;
-  }
-
-  .feature--accent .feature__sign {
-    margin-bottom: 14px;
-  }
-
-  .feature--bottom {
-    -ms-flex-item-align: start;
-    -ms-grid-row-align: start;
-    align-self: start;
   }
 
   .promo {

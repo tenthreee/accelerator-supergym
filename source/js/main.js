@@ -4,8 +4,7 @@ import {initTabs} from './modules/tabs/init-tabs';
 import {initFormValidate} from './modules/form-validate/init-form-validate';
 import {initSliders} from './modules/init-sliders';
 import {initStorage} from './modules/local-storage';
-import './modules/move-to';
-import {NavigationChanger} from './modules/navigation-changer';
+import {initMoveTo} from './modules/init-move-to';
 
 // ---------------------------------
 
@@ -22,8 +21,7 @@ window.addEventListener('DOMContentLoaded', () => {
   // все скрипты должны быть в обработчике 'DOMContentLoaded', но не все в 'load'
   // в load следует добавить скрипты, не участвующие в работе первого экрана
   window.addEventListener('load', () => {
-    const navigationChanger = new NavigationChanger();
-    navigationChanger.init();
+    initMoveTo();
     initTabs();
     initModals();
     initSliders();

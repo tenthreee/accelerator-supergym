@@ -5,7 +5,6 @@
   @include vp-1199 {
     border: none;
     background-image: none;
-    // background-image: linear-gradient(to bottom, $color-sapphire 0% 48%, $color-default-white 48% 100%);
   }
 
   @include vp-767 {
@@ -92,6 +91,23 @@
       outline: none;
       border-color: $color-default-white;
     }
+  }
+
+  label {
+    position: absolute;
+
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    padding: 0;
+    overflow: hidden;
+
+    white-space: nowrap;
+
+    border: 0;
+
+    clip: rect(0 0 0 0);
+    clip-path: inset(100%);
   }
 
   .is-invalid input {
