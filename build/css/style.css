@@ -2073,10 +2073,7 @@ button,
   padding: 55px 35px;
   background-color: #ffffff;
   cursor: pointer;
-  border: 7px solid transparent;
-  -webkit-transition: border-color 0.3s ease;
-  -o-transition: border-color 0.3s ease;
-  transition: border-color 0.3s ease;
+  border: 7px solid rgba(255, 255, 255, 0);
 }
 
 .membership__card--current,
@@ -2625,7 +2622,7 @@ button,
   -ms-flex-direction: column;
   flex-direction: column;
   color: #1c3374;
-  border: 7px solid transparent;
+  border: 7px solid rgba(255, 255, 255, 0);
   -o-border-image: -o-linear-gradient(352.95deg, #ed0233 17.6%, #003eb7 95.31%);
   border-image: linear-gradient(97.05deg, #ed0233 17.6%, #003eb7 95.31%);
   border-image-slice: 1;

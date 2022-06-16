@@ -185,8 +185,7 @@
   background-color: $color-default-white;
   cursor: pointer;
 
-  border: 7px solid transparent;
-  transition: border-color $trans-default;
+  border: 7px solid $color-transparent;
 
   @include vp-1199 {
     width: 442px;
