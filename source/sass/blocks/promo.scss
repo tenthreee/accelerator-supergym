@@ -22,6 +22,7 @@
   font-size: 49px;
   line-height: 1;
   text-align: center;
+  letter-spacing: 1.5px;
 
   @include vp-1199 {
     margin-bottom: 39px;
@@ -167,10 +168,9 @@
   flex-direction: column;
 
   color: $color-resolution-blue;
-  border: 10px solid transparent;
+  border: 7px solid transparent;
+  border-image: $main-gradient;
   border-image-slice: 1;
-  border-width: 7px;
-  border-image-source: $main-gradient;
 
   @include vp-1199 {
     min-height: 211px;

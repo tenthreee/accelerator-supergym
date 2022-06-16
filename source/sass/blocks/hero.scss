@@ -78,7 +78,7 @@
   line-height: 109px;
   font-weight: 700;
   text-transform: uppercase;
-  letter-spacing: 1.5px;
+  letter-spacing: 2.5px;
 
   @include vp-1199 {
     font-size: 86px;
@@ -93,7 +93,7 @@
 
 .hero__services {
   position: absolute;
-  bottom: 34px;
+  top: 189px;
   left: 20px;
 
   margin: 0;
@@ -104,12 +104,12 @@
   line-height: 1.5;
 
   @include vp-1199 {
-    bottom: 20px;
+    top: 133px;
     left: 0;
   }
 
   @include vp-767 {
-    bottom: 15px;
+    top: 121px;
   }
 }
 

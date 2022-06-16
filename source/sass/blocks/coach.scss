@@ -57,13 +57,15 @@
   left: 0;
   right: 0;
 
-  padding: 52px 47px 52px 52px;
+  padding: 30px;
+  padding-top: 52px;
   opacity: 0;
 
   text-align: center;
   color: $color-default-white;
   background-color: rgba($color: $color-sapphire, $alpha: 0.89);
   transition: opacity $trans-default;
+  overflow: auto;
 
   @include vp-767 {
     padding: 44px 32px;
@@ -82,6 +84,7 @@
 
 .coach__features {
   margin: 0;
+  margin-left: 21px;
   padding: 0;
   padding-left: 18px;
   list-style-type: disc;

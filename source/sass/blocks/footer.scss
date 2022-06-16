@@ -55,6 +55,7 @@
   line-height: 16px;
   color: $color-default-white;
   transition: opacity $trans-default;
+  user-select: none;
 
   @media (hover: hover), screen and (min-width: 0\0) {
     &:hover,
@@ -82,7 +83,8 @@
   padding: 0;
   list-style-type: none;
 
-  display: flex;
+  display: grid;
+  grid-template-columns: repeat(3, auto);
   align-items: center;
 
   @include vp-1199 {

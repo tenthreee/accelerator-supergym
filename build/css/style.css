@@ -1570,6 +1570,10 @@ button,
   background-color: rgba(255, 255, 255, 0);
   border: 4px solid #ffffff;
   cursor: pointer;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
   -webkit-transition: opacity 0.3s ease;
   -o-transition: opacity 0.3s ease;
   transition: opacity 0.3s ease;
@@ -1792,12 +1796,12 @@ button,
   line-height: 109px;
   font-weight: 700;
   text-transform: uppercase;
-  letter-spacing: 1.5px;
+  letter-spacing: 2.5px;
 }
 
 .hero__services {
   position: absolute;
-  bottom: 34px;
+  top: 189px;
   left: 20px;
   margin: 0;
   padding: 0;
@@ -1880,6 +1884,7 @@ button,
   font-weight: 400;
   font-size: 49px;
   line-height: 49px;
+  letter-spacing: 1.5px;
   text-transform: uppercase;
 }
 
@@ -1958,7 +1963,7 @@ button,
   right: calc((100vw - 1200px - 385px) / 2);
   width: 322px;
   height: 385px;
-  background-image: url("../../img/weights.png");
+  background-image: url("../img/weights.png");
   background-repeat: no-repeat;
   background-position: center;
   background-size: 322px auto;
@@ -1985,6 +1990,7 @@ button,
   font-weight: 400;
   font-size: 49px;
   line-height: 49px;
+  letter-spacing: 1.5px;
   text-transform: uppercase;
 }
 
@@ -2006,6 +2012,10 @@ button,
   border: none;
   background-color: transparent;
   cursor: pointer;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
 }
 
 .membership__control:not(:last-of-type) {
@@ -2040,10 +2050,11 @@ button,
 
 .membership__tab {
   width: 100%;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  gap: 40px;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (31%)[3];
+  grid-template-columns: repeat(3, 31%);
+  gap: 3.4%;
 }
 
 .membership__card {
@@ -2055,14 +2066,14 @@ button,
   -webkit-box-direction: normal;
   -ms-flex-direction: column;
   flex-direction: column;
-  width: 31%;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
   min-height: 448px;
-  padding: 55px 70px;
+  padding: 55px 35px;
   background-color: #ffffff;
   cursor: pointer;
-  border: 10px solid transparent;
-  border-image-slice: 1;
-  border-width: 7px;
+  border: 7px solid transparent;
   -webkit-transition: border-image-source 0.3s ease;
   -o-transition: border-image-source 0.3s ease;
   transition: border-image-source 0.3s ease;
@@ -2070,7 +2081,9 @@ button,
 
 .membership__card--current,
 .membership__card:hover {
-  border-image-source: linear-gradient(97.05deg, #ed0233 17.6%, #003eb7 95.31%);
+  -o-border-image: -o-linear-gradient(352.95deg, #ed0233 17.6%, #003eb7 95.31%);
+  border-image: linear-gradient(97.05deg, #ed0233 17.6%, #003eb7 95.31%);
+  border-image-slice: 1;
 }
 
 .membership__card--current .membership__card-button,
@@ -2098,7 +2111,6 @@ button,
   position: relative;
   margin: 0;
   margin-bottom: 49px;
-  padding-right: 44px;
   color: #103aae;
   font-weight: 700;
   font-size: 60px;
@@ -2119,22 +2131,10 @@ button,
   transform: translateX(-50%);
 }
 
-.membership__card-price::after {
-  content: "";
-  position: absolute;
-  top: 50%;
-  right: 20px;
-  width: 30px;
-  height: 42px;
-  background-image: url("../img/svg/rubble.svg");
-  -webkit-transform: translateY(-50%);
-  -ms-transform: translateY(-50%);
-  transform: translateY(-50%);
-}
-
 .membership__card-button {
   display: block;
   padding: 24px;
+  min-width: 206px;
   font-size: 12px;
   line-height: 14px;
   font-weight: 700;
@@ -2173,9 +2173,9 @@ button,
   grid-template-columns: min-content auto;
   -ms-grid-rows: 1fr 1fr;
   grid-template-rows: 1fr 1fr;
-  -webkit-column-gap: 63px;
-  -moz-column-gap: 63px;
-  column-gap: 63px;
+  -webkit-column-gap: 56px;
+  -moz-column-gap: 56px;
+  column-gap: 56px;
 }
 
 .games__title {
@@ -2187,6 +2187,7 @@ button,
   font-weight: 400;
   font-size: 90px;
   line-height: 90px;
+  letter-spacing: 1.5px;
 }
 
 .games__subtitle {
@@ -2248,6 +2249,7 @@ button,
   font-weight: 400;
   font-size: 49px;
   line-height: 49px;
+  letter-spacing: 1.5px;
 }
 
 .coaches__container {
@@ -2290,6 +2292,7 @@ button,
 }
 
 .coaches__control::after {
+  color: #afafaf;
   font-size: 35px;
 }
 
@@ -2336,7 +2339,8 @@ button,
   bottom: 0;
   left: 0;
   right: 0;
-  padding: 52px 47px 52px 52px;
+  padding: 30px;
+  padding-top: 52px;
   opacity: 0;
   text-align: center;
   color: #ffffff;
@@ -2344,6 +2348,7 @@ button,
   -webkit-transition: opacity 0.3s ease;
   -o-transition: opacity 0.3s ease;
   transition: opacity 0.3s ease;
+  overflow: auto;
 }
 
 .coach__name {
@@ -2358,6 +2363,7 @@ button,
 
 .coach__features {
   margin: 0;
+  margin-left: 21px;
   padding: 0;
   padding-left: 18px;
   list-style-type: disc;
@@ -2383,6 +2389,7 @@ button,
   font-size: 49px;
   line-height: 49px;
   text-align: center;
+  letter-spacing: 1.5px;
 }
 
 .features__wrapper {
@@ -2525,6 +2532,7 @@ button,
   font-size: 49px;
   line-height: 1;
   text-align: center;
+  letter-spacing: 1.5px;
 }
 
 .promo__wrapper {
@@ -2617,10 +2625,10 @@ button,
   -ms-flex-direction: column;
   flex-direction: column;
   color: #1c3374;
-  border: 10px solid transparent;
+  border: 7px solid transparent;
+  -o-border-image: -o-linear-gradient(352.95deg, #ed0233 17.6%, #003eb7 95.31%);
+  border-image: linear-gradient(97.05deg, #ed0233 17.6%, #003eb7 95.31%);
   border-image-slice: 1;
-  border-width: 7px;
-  border-image-source: linear-gradient(97.05deg, #ed0233 17.6%, #003eb7 95.31%);
 }
 
 .promo__card-title {
@@ -2664,6 +2672,7 @@ button,
   font-size: 49px;
   line-height: 1;
   text-align: center;
+  letter-spacing: 1.5px;
 }
 
 .reviews__container {
@@ -2677,6 +2686,7 @@ button,
   overflow: hidden;
   -webkit-box-shadow: 0 0 40px rgba(28, 51, 116, 0.2);
   box-shadow: 0 0 40px rgba(28, 51, 116, 0.2);
+  background-color: #1c3374;
 }
 
 .reviews__list {
@@ -2711,7 +2721,7 @@ button,
 .reviews__item-title {
   margin: 0;
   font-size: 20px;
-  line-height: 1.5;
+  line-height: 1.3;
 }
 
 .reviews__item-text {
@@ -2743,6 +2753,7 @@ button,
 }
 
 .reviews__control::after {
+  color: #afafaf;
   font-size: 35px;
 }
 
@@ -2846,6 +2857,7 @@ button,
   font-weight: 400;
   font-size: 49px;
   line-height: 49px;
+  letter-spacing: 1.5px;
 }
 
 .contacts__user-button {
@@ -2876,6 +2888,7 @@ button,
   font-weight: 400;
   font-size: 49px;
   line-height: 49px;
+  letter-spacing: 1.5px;
 }
 
 .contacts__gym-subtitle {
@@ -2953,15 +2966,20 @@ button,
   -webkit-transition: opacity 0.3s ease;
   -o-transition: opacity 0.3s ease;
   transition: opacity 0.3s ease;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
 }
 
 .footer__social-list {
   margin: 0;
   padding: 0;
   list-style-type: none;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (auto)[3];
+  grid-template-columns: repeat(3, auto);
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
@@ -3101,7 +3119,7 @@ button,
   }
 
   .hero__services {
-    bottom: 20px;
+    top: 133px;
     left: 0;
   }
 
@@ -3216,10 +3234,11 @@ button,
 
   .membership__tab {
     width: auto;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-    -ms-flex-direction: column;
-    flex-direction: column;
+    -ms-grid-columns: auto;
+    grid-template-columns: auto;
+    -ms-grid-rows: (auto)[3];
+    grid-template-rows: repeat(3, auto);
+    gap: 40px;
   }
 
   .membership__card {
@@ -3228,10 +3247,6 @@ button,
 
   .membership__card-type {
     margin-bottom: 82px;
-  }
-
-  .membership__card-price::after {
-    right: 61px;
   }
 
   .membership__card-button {
@@ -3253,9 +3268,9 @@ button,
 
   .games__wrapper {
     margin-bottom: 0;
-    -webkit-column-gap: 38px;
-    -moz-column-gap: 38px;
-    column-gap: 38px;
+    -webkit-column-gap: 31px;
+    -moz-column-gap: 31px;
+    column-gap: 31px;
   }
 
   .games__title {
@@ -3593,7 +3608,7 @@ button,
   }
 
   .hero__services {
-    bottom: 15px;
+    top: 121px;
   }
 
   .hero__button {
@@ -3643,7 +3658,7 @@ button,
 
   .gym__video {
     position: relative;
-    bottom: auto;
+    top: auto;
     left: auto;
     -webkit-transform: none;
     -ms-transform: none;
@@ -3701,7 +3716,6 @@ button,
 
   .membership__card-price {
     margin-bottom: 13px;
-    padding-right: 31px;
     font-size: 48px;
   }
 
@@ -3709,11 +3723,9 @@ button,
     font-size: 80px;
   }
 
-  .membership__card-price::after {
-    right: 35px;
+  .membership__card-price svg {
     width: 24px;
     height: 33px;
-    background-size: 24px auto;
   }
 
   .membership__card-button {
@@ -3729,6 +3741,12 @@ button,
     grid-template-rows: 1fr 1fr;
   }
 
+  .games__wrapper {
+    -webkit-column-gap: 29px;
+    -moz-column-gap: 29px;
+    column-gap: 29px;
+  }
+
   .coaches {
     padding-bottom: 70px;
   }
@@ -3739,7 +3757,7 @@ button,
   }
 
   .coaches__container {
-    width: 226px;
+    width: 78%;
   }
 
   .coaches__control::after {
@@ -3913,7 +3931,7 @@ button,
   }
 
   .reviews__container {
-    width: 226px;
+    width: 78%;
   }
 
   .reviews__item {
@@ -3931,7 +3949,12 @@ button,
     width: 68px;
     height: auto;
     grid-row: auto;
-    margin-left: 6px;
+    margin-left: auto;
+  }
+
+  .reviews__item-title {
+    margin-top: 8px;
+    margin-right: auto;
   }
 
   .reviews__item-text {
@@ -4057,6 +4080,6 @@ button,
 
 @media (-webkit-min-device-pixel-ratio: 1.5), (-o-min-device-pixel-ratio: 3/2), (min-resolution: 144dpi), (min-resolution: 1.5dppx) {
   .membership::after {
-    background-image: url("../../img/weights@2x.png");
+    background-image: url("../img/weights@2x.png");
   }
 }
