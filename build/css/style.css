@@ -2074,9 +2074,9 @@ button,
   background-color: #ffffff;
   cursor: pointer;
   border: 7px solid transparent;
-  -webkit-transition: border-image-source 0.3s ease;
-  -o-transition: border-image-source 0.3s ease;
-  transition: border-image-source 0.3s ease;
+  -webkit-transition: border-color 0.3s ease;
+  -o-transition: border-color 0.3s ease;
+  transition: border-color 0.3s ease;
 }
 
 .membership__card--current,
@@ -3737,14 +3737,18 @@ button,
     padding-bottom: 70px;
     -ms-grid-columns: 1fr;
     grid-template-columns: 1fr;
-    -ms-grid-rows: 1fr 1fr;
-    grid-template-rows: 1fr 1fr;
+    -ms-grid-rows: 292px auto;
+    grid-template-rows: 292px auto;
   }
 
   .games__wrapper {
     -webkit-column-gap: 29px;
     -moz-column-gap: 29px;
     column-gap: 29px;
+  }
+
+  .games__image img {
+    min-height: 292px;
   }
 
   .coaches {
@@ -3782,11 +3786,16 @@ button,
   }
 
   .coach img {
-    height: 274px;
+    aspect-ratio: 226 / 274;
+    height: 100%;
   }
 
   .coach__info {
     padding: 44px 32px;
+  }
+
+  .coach__features {
+    margin: 0;
   }
 
   .features {
@@ -3884,8 +3893,8 @@ button,
   .promo__block {
     -ms-grid-columns: auto;
     grid-template-columns: auto;
-    -ms-grid-rows: (1fr)[2];
-    grid-template-rows: repeat(2, 1fr);
+    -ms-grid-rows: 299px auto;
+    grid-template-rows: 299px auto;
   }
 
   .promo__block-text {
@@ -3903,7 +3912,7 @@ button,
   }
 
   .promo__block-image img {
-    height: 299px;
+    height: 100%;
   }
 
   .promo__card {

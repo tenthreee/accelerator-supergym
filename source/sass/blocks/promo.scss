@@ -65,7 +65,7 @@
 
   @include vp-767 {
     grid-template-columns: auto;
-    grid-template-rows: repeat(2, 1fr);
+    grid-template-rows: 299px auto;
   }
 }
 
@@ -155,7 +155,7 @@
     }
 
     @include vp-767 {
-      height: 299px;
+      height: 100%;
     }
   }
 }

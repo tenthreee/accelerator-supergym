@@ -186,7 +186,7 @@
   cursor: pointer;
 
   border: 7px solid transparent;
-  transition: border-image-source $trans-default;
+  transition: border-color $trans-default;
 
   @include vp-1199 {
     width: 442px;
