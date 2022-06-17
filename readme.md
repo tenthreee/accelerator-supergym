@@ -1,13 +1,11 @@
-## Краткая инструкция по работе
-Для начала работы у вас должент быть установлен **Node.js**
+# Super Gym
 
-### Основные команды для работы
-- Установка - `npm i`
-- Запуск локального сервера - `npm start`
-- Сборка проекта, минификация скриптов <br>
-и оптимизация изображений перед деплоем на прод - `npm run build`
-- Запуск тестирования на соответствия кодгайдам - `npm test`
-- Создание webp изображений в директории source - `npm run webp`
+https://tenthreee.github.io/accelerator-supergym/
 
-### Вся разработка ведётся в директории `source`
-### Итоговый код попадает в директорию `build`
+- Responsive website.
+- Mobile, tablet and desktop viewports.
+- Carousel Slider with Swiper.js.
+- Modal window (to open click Play Button on second screen).
+- Tabs, Form Validation.
+
+**HTML・BEM・SCSS・Flex・Grid・Ally・Gulp・JavaScript・Swiper.js**
