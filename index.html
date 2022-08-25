@@ -84,16 +84,18 @@
             </picture>
           </div>
 
-          <div class="gym__video">
-            <picture>
-              <!-- 1x: 320px; 2x: 640px -->
-              <source media="(max-width: 797px)" srcset="./img/video_mobile.webp 1x, ./img/video_mobile@2x.webp 2x" type="image/webp">
-              <source media="(max-width: 797px)" srcset="./img/video_mobile.jpg 1x, ./img/video_mobile@2x.jpg 2x">
-              <!-- 1x: 364px; 2x: 728px -->
-              <source media="(min-width: 1200px)" srcset="./img/video.webp 1x, ./img/video@2x.webp 2x" type="image/webp">
-              <img src="./img/video.jpg" srcset="./img/video@2x.jpg 2x" alt="Превью видеоролика о тренажёрном зале." width="364" height="228">
-            </picture>
-            <button class="gym__play-btn" type="button" data-open-modal="video" aria-label="Запустить видео"></button>
+          <div class="gym__video js-video">
+            <a class="gym__video-link" href="https://www.youtube.com/watch?v=9TZXsZItgdw" target="_blank">
+              <picture>
+                <!-- 1x: 320px; 2x: 640px -->
+                <source media="(max-width: 797px)" srcset="./img/video_mobile.webp 1x, ./img/video_mobile@2x.webp 2x" type="image/webp">
+                <source media="(max-width: 797px)" srcset="./img/video_mobile.jpg 1x, ./img/video_mobile@2x.jpg 2x">
+                <!-- 1x: 364px; 2x: 728px -->
+                <source media="(min-width: 1200px)" srcset="./img/video.webp 1x, ./img/video@2x.webp 2x" type="image/webp">
+                <img src="./img/video.jpg" srcset="./img/video@2x.jpg 2x" alt="Превью видеоролика о тренажёрном зале." width="364" height="228">
+              </picture>
+            </a>
+            <button class="gym__video-button" type="button" data-open-modal="video" aria-label="Запустить видео"></button>
           </div>
         </section>
 
@@ -526,10 +528,12 @@
                 <div class="contacts__user-input" data-validate-type="text">
                   <label for="user__name">Имя</label>
                   <input type="text" id="user__name" placeholder="Имя" required>
+                  <span class="contacts__user-input-error">Напишите ваше имя</span>
                 </div>
                 <div class="contacts__user-input" data-validate-type="phone">
                   <label for="user__tel">Телефон</label>
                   <input type="tel" id="user__tel" placeholder="Телефон" required>
+                  <span class="contacts__user-input-error">Введите номер телефона</span>
                 </div>
                 <button class="contacts__user-button btn" type="submit">Отправить</button>
               </form>
@@ -598,37 +602,6 @@
           </section>
         </div>
       </footer>
-    </div>
-
-    <!-- Модалки -->
-    <div class="modal modal--preload" data-modal="feedback">
-      <div class="modal__wrapper">
-        <div class="modal__overlay" data-close-modal></div>
-        <div class="modal__content">
-          <p class="modal__description">Обычная модалка</p>
-          <button class="modal__close-btn btn-reset" type="button" aria-label="Закрыть попап" data-close-modal>
-            <svg width="15" height="15">
-              <use xlink:href="img/sprite_auto.svg#icon-close"></use>
-            </svg>
-          </button>
-        </div>
-      </div>
-    </div>
-
-    <div class="modal modal--preload modal--fit-content modal--no-scale" data-modal="video">
-      <div class="modal__wrapper">
-        <div class="modal__overlay" data-close-modal></div>
-        <div class="modal__content">
-          <div data-iframe data-auto-play>
-            <iframe width="560" height="315" src="https://www.youtube.com/embed/9TZXsZItgdw?enablejsapi=1" title="YouTube video player" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-          </div>
-          <button class="modal__close-btn btn-reset" type="button" aria-label="Закрыть попап" data-close-modal>
-            <svg width="15" height="15">
-              <use xlink:href="img/sprite_auto.svg#icon-close"></use>
-            </svg>
-          </button>
-        </div>
-      </div>
     </div>
 
     <script src="js/vendor.min.js"></script>
