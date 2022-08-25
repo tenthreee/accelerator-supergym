@@ -5,6 +5,7 @@ import {initFormValidate} from './modules/form-validate/init-form-validate';
 import {initSliders} from './modules/init-sliders';
 import {initStorage} from './modules/local-storage';
 import {initMoveTo} from './modules/init-move-to';
+import {initVideo} from './modules/init-video';
 
 // ---------------------------------
 
@@ -23,6 +24,7 @@ window.addEventListener('DOMContentLoaded', () => {
   window.addEventListener('load', () => {
     initMoveTo();
     initTabs();
+    initVideo();
     initModals();
     initSliders();
     initStorage();
