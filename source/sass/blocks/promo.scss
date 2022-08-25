@@ -117,6 +117,7 @@
 }
 
 .promo__block-link {
+  position: relative;
   align-self: start;
   margin-top: auto;
   margin-bottom: 9px;
@@ -130,13 +131,6 @@
 
   border-bottom: 1px solid $color-default-white;
   transition: opacity $trans-default;
-
-  @media (hover: hover), screen and (min-width: 0\0) {
-    &:hover,
-    &:focus {
-      opacity: 0.8;
-    }
-  }
 
   @include vp-767 {
     align-self: center;
@@ -200,6 +194,7 @@
 }
 
 .promo__card-link {
+  position: relative;
   align-self: start;
   margin-top: auto;
   padding-bottom: 3px;
@@ -213,15 +208,32 @@
   border-bottom: 1px solid $color-resolution-blue;
   transition: opacity $trans-default;
 
+  @include vp-767 {
+    margin-top: 0;
+    align-self: center;
+  }
+}
+
+.promo__block-link,
+.promo__card-link {
+  position: relative;
+
+  &::before {
+    position: absolute;
+    content: "";
+    top: 50%;
+    left: 50%;
+
+    width: calc(100% + 30px);
+    height: calc(100% + 30px);
+
+    transform: translate(-50%, -50%);
+  }
+
   @media (hover: hover), screen and (min-width: 0\0) {
     &:hover,
     &:focus {
       opacity: 0.8;
     }
-  }
-
-  @include vp-767 {
-    margin-top: 0;
-    align-self: center;
   }
 }
