@@ -112,7 +112,7 @@
 
               <div class="membership__tabs" data-tabs="content">
                 <div class="membership__tab is-active" data-tabs="element">
-                  <div class="membership__card">
+                  <div class="membership__card" tabindex="0">
                     <h3 class="membership__card-title">С тренером</h3>
                     <span class="membership__card-type">12 занятий</span>
                     <p class="membership__card-price" data-price="5000">5000
@@ -122,7 +122,7 @@
                     </p>
                     <a class="membership__card-button" href="#">Купить абонемент</a>
                   </div>
-                  <div class="membership__card membership__card--current">
+                  <div class="membership__card" tabindex="0">
                     <h3 class="membership__card-title">Дневной</h3>
                     <span class="membership__card-type">с 8:00 до 17:00</span>
                     <p class="membership__card-price" data-price="1700">1700
@@ -132,7 +132,7 @@
                     </p>
                     <a class="membership__card-button" href="#">Купить абонемент</a>
                   </div>
-                  <div class="membership__card">
+                  <div class="membership__card" tabindex="0">
                     <h3 class="membership__card-title">Полный день</h3>
                     <span class="membership__card-type">с 8:00 до 22:00</span>
                     <p class="membership__card-price" data-price="2700">2700
@@ -242,9 +242,12 @@
         <section class="coaches container" id="coaches">
           <h2 class="coaches__title">Тренеры</h2>
           <div class="coaches__container">
+            <button class="coaches__control coaches__control--prev swiper-button-prev" type="button" aria-label="Показать предыдущих тренеров"></button>
+            <button class="coaches__control coaches__control--next swiper-button-next" type="button" aria-label="Показать следующих тренеров"></button>
+
             <div class="coaches__wrapper swiper">
               <ul class="coaches__list swiper-wrapper">
-                <li class="coach swiper-slide">
+                <li class="coach swiper-slide" tabindex="0">
                   <picture>
                     <!-- 1x: 260px; 2x: 520px -->
                     <source media="(min-width: 1200px)" srcset="./img/coach-anna.webp 1x, ./img/coach-anna@2x.webp 2x" type="image/webp">
@@ -262,7 +265,7 @@
                   </div>
                 </li>
 
-                <li class="coach coach--mobile-noshow swiper-slide">
+                <li class="coach coach--mobile-noshow swiper-slide" tabindex="0">
                   <picture>
                     <!-- 1x: 260px; 2x: 520px -->
                     <source media="(min-width: 1200px)" srcset="./img/coach-alex.webp 1x, ./img/coach-alex@2x.webp 2x" type="image/webp">
@@ -280,7 +283,7 @@
                   </div>
                 </li>
 
-                <li class="coach coach--mobile-noshow coach--tablet-noshow swiper-slide">
+                <li class="coach coach--mobile-noshow coach--tablet-noshow swiper-slide" tabindex="0">
                   <picture>
                     <!-- 1x: 260px; 2x: 520px -->
                     <source media="(min-width: 1200px)" srcset="./img/coach-alexndr.webp 1x, ./img/coach-alexndr@2x.webp 2x" type="image/webp">
@@ -298,7 +301,7 @@
                   </div>
                 </li>
 
-                <li class="coach coach--mobile-noshow coach--tablet-noshow swiper-slide">
+                <li class="coach coach--mobile-noshow coach--tablet-noshow swiper-slide" tabindex="0">
                   <picture>
                     <!-- 1x: 260px; 2x: 520px -->
                     <source media="(min-width: 1200px)" srcset="./img/coach-maria.webp 1x, ./img/coach-maria@2x.webp 2x" type="image/webp">
@@ -316,7 +319,7 @@
                   </div>
                 </li>
 
-                <li class="coach swiper-slide">
+                <li class="coach swiper-slide" tabindex="0">
                   <picture>
                     <!-- 1x: 260px; 2x: 520px -->
                     <source media="(min-width: 1200px)" srcset="./img/coach-anna.webp 1x, ./img/coach-anna@2x.webp 2x" type="image/webp">
@@ -334,7 +337,7 @@
                   </div>
                 </li>
 
-                <li class="coach coach--mobile-noshow swiper-slide">
+                <li class="coach coach--mobile-noshow swiper-slide" tabindex="0">
                   <picture>
                     <!-- 1x: 260px; 2x: 520px -->
                     <source media="(min-width: 1200px)" srcset="./img/coach-alex.webp 1x, ./img/coach-alex@2x.webp 2x" type="image/webp">
@@ -352,7 +355,7 @@
                   </div>
                 </li>
 
-                <li class="coach coach--mobile-noshow coach--tablet-noshow swiper-slide">
+                <li class="coach coach--mobile-noshow coach--tablet-noshow swiper-slide" tabindex="0">
                   <picture>
                     <!-- 1x: 260px; 2x: 520px -->
                     <source media="(min-width: 1200px)" srcset="./img/coach-alexndr.webp 1x, ./img/coach-alexndr@2x.webp 2x" type="image/webp">
@@ -370,7 +373,7 @@
                   </div>
                 </li>
 
-                <li class="coach coach--mobile-noshow coach--tablet-noshow swiper-slide">
+                <li class="coach coach--mobile-noshow coach--tablet-noshow swiper-slide" tabindex="0">
                   <picture>
                     <!-- 1x: 260px; 2x: 520px -->
                     <source media="(min-width: 1200px)" srcset="./img/coach-maria.webp 1x, ./img/coach-maria@2x.webp 2x" type="image/webp">
@@ -390,8 +393,8 @@
               </ul>
             </div>
 
-            <button class="coaches__control coaches__control--prev swiper-button-prev" type="button" aria-label="Показать предыдущих тренеров"></button>
-            <button class="coaches__control coaches__control--next swiper-button-next" type="button" aria-label="Показать следующих тренеров"></button>
+            <!-- <button class="coaches__control coaches__control--prev swiper-button-prev" type="button" aria-label="Показать предыдущих тренеров"></button>
+            <button class="coaches__control coaches__control--next swiper-button-next" type="button" aria-label="Показать следующих тренеров"></button> -->
           </div>
         </section>
 
