@@ -11,8 +11,8 @@
     "stylelint": "stylelint \"source/sass/**/*.scss\" --syntax scss",
     "test": "npm run editorconfig & npm run stylelint & eslint source/js/",
     "build": "cross-env NODE_ENV=production gulp build & gulp imagemin",
-    "deploy": "gh-pages -d build",
     "start": "cross-env NODE_ENV=development gulp start",
+    "deploy": "gh-pages -d build",
     "webp": "gulp webp",
     "imagemin": "gulp imagemin"
   },
